@@ -10,7 +10,11 @@ function login() {
         localStorage.setItem('password', password);
         returnMessage = "❤️Login berhasil! Selamat datang, " + username + "!❤️";
         message.textContent = returnMessage;
-        window.location.href = "#"; // Mengarahkan ke halaman lain
+        
+        // Mengarahkan ke halaman lain setelah login berhasil
+        setTimeout(() => {
+            window.location.href = "#"; // Ganti dengan URL yang sesuai jika diperlukan
+        }, 3000); // Tunggu 3 detik sebelum mengalihkan
     } else {
         returnMessage = "Login gagal! Periksa username dan password Anda.";
         message.textContent = returnMessage;
@@ -25,4 +29,3 @@ function login() {
     
     return returnMessage; // Mengembalikan pesan
 }
-//halo//
